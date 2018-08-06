@@ -34,5 +34,6 @@ public class _00_ArrayCheatSheet {
 			System.out.println(numbers[j]);
 		}
 		//10. print the largest number in the array.
+		System.out.println(numbers[49]);
 	}
 }
