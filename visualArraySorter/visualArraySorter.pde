@@ -12,7 +12,7 @@ void setup() {
   //3. initialize your array with the built in width variable
   numbers = new int[width];
   //4. initialize the ints in the array with random numbers
-
+  randomm();
   //   from 0 to the built in height variable
 
   //5. call the noStroke() method
@@ -26,7 +26,9 @@ void draw() {
   //7. set the color for your graph
   fill(252,229,212);
   //8. draw a rectangle for each int in your array.
-  rect(numbers,height,1,1);
+  for(int j = 0; j<numbers.length; j++){
+  rect(j,height,1,-numbers[j]);
+  }
   //   the x value will be the element of the int
   
   //   the y value will the height variable
@@ -37,11 +39,13 @@ void draw() {
 
 
   //9. call the stepSort method
-  stepSort(int[] arr);
+  stepSort(numbers);
   //10. extract the code that randomizes the array into a method.
-
+  
   //11. call the method you made in step 10 when the mouse is pressed
-
+  if(mousePressed == true){
+    randomm();
+}
 }
 void randomm(){
   for(int j=0; j<numbers.length; j++){
